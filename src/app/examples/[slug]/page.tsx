@@ -6,7 +6,8 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>
 }) {
   const key = (await params).slug;
-  const imageUrl = 'https://rustfinity-og.vercel.app/og-images/advent-of-rust?key=' + key;
+  const siteUrl = process.env.NODE_ENV == "development" ? "http://localhost:3000/" : 'https://rustfinity-og.vercel.app/';
+  const imageUrl = siteUrl + 'og-images/advent-of-rust?key=' + key;
 
   // Return dynamic metadata for the page
   return {
@@ -40,19 +41,20 @@ export default async function Home({
   params: Promise<{ slug: string }>
 }) {
   const key = (await params).slug;
-  const imageUrl = 'https://rustfinity-og.vercel.app/og-images/advent-of-rust?key=' + key;
+  const siteUrl = process.env.NODE_ENV == "development" ? "http://localhost:3000/" : 'https://rustfinity-og.vercel.app/';
+  const imageUrl = siteUrl + 'og-images/advent-of-rust?key=' + key;
+  //const imageUrl = '/og-images/advent-of-rust?key=' + key;
 
   return (
     <>
       <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
         <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-          <Image
-            className="dark:invert"
-            src="/next.svg"
+          {/*eslint-disable-next-line @next/next/no-img-element*/}
+          <img
+            src={imageUrl}
             alt="Next.js logo"
-            width={180}
-            height={38}
-            priority
+            width={1200}
+            height={630}
           />
           <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
             <li className="mb-2"> the slug is {key}.  </li>
