@@ -22,8 +22,8 @@ export async function GET(req: NextRequest) {
     return new ImageResponse(
         (
             <div tw='flex flex-col'>
-                <p> {title} </p>
-                <p> {description} </p>
+                <h1 tw='text-9xl'> {title} </h1>
+                <h2 tw='text-4xl'> {description} </h2>
             </div>
         ), {
         debug: true
