@@ -14,10 +14,7 @@ export default function Home() {
           priority
         />
         <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2"> <Link href="/examples/aor-2024-1">Day 1 </Link> </li>
-          <li className="mb-2"> <Link href="/examples/aor-2024-2">Day 2</Link> </li>
-          <li className="mb-2"> <Link href="/examples/aor-2024-3">Day 3</Link> </li>
-          <li className="mb-2"> <Link href="/examples/aor-2024-4">Day 4</Link> </li>
+          <li className="mb-2"> <Link href="/advent-of-rust">Advent of rust OG image </Link> </li>
         </ol>
 
       </main>
