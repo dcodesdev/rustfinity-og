@@ -24,7 +24,7 @@ export async function GET(req: NextRequest) {
                 />
 
                 <h1 tw="text-6xl md:text-7xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 flex" style={{ backgroundImage: "linear-gradient(#fafafa, #a3a3a3)", color: "transparent", backgroundClip: "text", fontWeight: 700 }}>
-                    Day {day}
+                    {day}
                 </h1>
 
                 <h1 tw="text-4xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 flex" style={{ backgroundImage: "linear-gradient(#fafafa, #a3a3a3)", color: "transparent", backgroundClip: "text", fontWeight: 400 }}>

@@ -7,7 +7,7 @@ const siteUrl = process.env.NODE_ENV == "development" ? "http://localhost:3000/"
 
 export default function Home() {
   const [formData, setFormData] = useState({
-    day: 2,
+    day: "Advent of Rust: Day 2",
     description: "Memory doesn't grow on Christmas trees 🎄"
     ,
   });
@@ -48,7 +48,7 @@ export default function Home() {
         <Form action="#" className="max-w-sm mx-auto" onSubmit={submitForm}>
           <div className="mb-5">
             <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
-            <input className="bg-gray-50 border border-gray-300 text-white-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" type="number" style={{ color: 'black' }} name="day" id="day" value={formData.day} onChange={handleInput} />
+            <input className="bg-gray-50 border border-gray-300 text-white-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" type="text" style={{ color: 'black' }} name="day" id="day" value={formData.day} onChange={handleInput} />
           </div>
 
           <div className="mb-5">
