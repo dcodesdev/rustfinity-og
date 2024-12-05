@@ -13,7 +13,7 @@ export default function Home() {
   });
 
   const [formImage, setFormImage] = useState({
-    imageSource: `${siteUrl}og-images/advent-of-rust?day=2&description=${encodeURI("Memory doesn't grow on Christmas trees 🎄")}`,
+    imageSource: `${siteUrl}og-images/advent-of-rust?day=${encodeURI("Advent of Rust: Day 2")}&description=${encodeURI("Memory doesn't grow on Christmas trees 🎄")}`,
   });
 
   const handleInput = (e: ChangeEvent<HTMLInputElement>) => {
@@ -31,7 +31,7 @@ export default function Home() {
     e.preventDefault()
 
     console.log(formData);
-    setFormImage({ imageSource: `${siteUrl}og-images/advent-of-rust?day=${formData.day}&description=${encodeURI(formData.description)}` });
+    setFormImage({ imageSource: `${siteUrl}og-images/advent-of-rust?day=${encodeURI(formData.day)}&description=${encodeURI(formData.description)}` });
   }
 
   return (
