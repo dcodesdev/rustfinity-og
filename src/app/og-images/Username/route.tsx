@@ -22,27 +22,12 @@ export async function GET(req: NextRequest) {
         (
             <div tw="h-full w-full rounded-md flex items-center justify-top bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden flex-row" style={{ backgroundColor: 'black' }}>
 
-                <div tw="relative text-sm font-medium leading-6 flex ml-[200] mt-[150]">
-                    <div tw="rounded-lg p-4 flex">
-                        <div tw="static p-4 h-32 flex">
-
-                            <div tw="absolute bottom-0 right-0 lg rounded-lg p-4 flex">
-                                {/*eslint-disable-next-line @next/next/no-img-element*/}
-                                <img alt=''
-                                    tw='h-[85] w-[85] rounded-full'
-                                    src={imageUrl}
-                                />
-                            </div>
-                            <p tw="flex">
-                                {/*eslint-disable-next-line @next/next/no-img-element*/}
-                                <img alt=''
-                                    tw='h-[35] w-[35] '
-                                    src={`${siteUrl}/rustfinity-logo.png`}
-                                />
-                            </p>
-
-                        </div>
-                    </div>
+                <div tw='flex flex-col'>
+                    {/*eslint-disable-next-line @next/next/no-img-element*/}
+                    <img alt=''
+                        tw='h-[75] w-[75] rounded-full ml-[65] mr-[65]'
+                        src={imageUrl}
+                    />
                 </div>
 
                 <div tw='flex flex-col'>
@@ -51,7 +36,7 @@ export async function GET(req: NextRequest) {
                     </h1>
 
                     <h1 tw="text-4xl text-left bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 flex" style={{ backgroundImage: "linear-gradient(#fafafa, #a3a3a3)", color: "transparent", backgroundClip: "text", fontWeight: 400 }}>
-                        {username}
+                        rustfinity.com/{username}
                     </h1>
                 </div>
 
