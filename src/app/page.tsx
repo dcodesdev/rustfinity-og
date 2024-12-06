@@ -15,6 +15,7 @@ export default function Home() {
         />
         <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
           <li className="mb-2"> <Link href="/advent-of-rust">Advent of rust OG image </Link> </li>
+          <li className="mb-2"> <Link href="/Username">Username</Link> </li>
         </ol>
 
       </main>
